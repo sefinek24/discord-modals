@@ -121,10 +121,10 @@ export class SelectMenuComponent extends BaseMessageComponent {
   options: APISelectMenuOption[];
   disabled: boolean;
 
-  setCustomId(id: string): SelectMenuComponent;  
+  setCustomId(id: string): SelectMenuComponent;
   setPlaceholder(placeholder: string): SelectMenuComponent;
-  setMinValues(minValues: number): SelectMenuComponent;  
-  setMaxValues(maxValues: number): SelectMenuComponent;    
+  setMinValues(minValues: number): SelectMenuComponent;
+  setMaxValues(maxValues: number): SelectMenuComponent;
   addOptions(...options: APISelectMenuOption[]): SelectMenuComponent;
   setOptions(...options: APISelectMenuOption[]): SelectMenuComponent;
   spliceOptions(): SelectMenuComponent;
