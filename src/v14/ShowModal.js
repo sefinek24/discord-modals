@@ -8,14 +8,14 @@ const { InteractionResponseTypes } = require('../util/Constants');
 
 /**
  * Shows the Modal to the Interaction User.
- * @param {Modal} Modal Modal.
- * @param {Object} Options Client and Interaction.
  * @example
  * showModal(Modal, {
  *   client: Client, // Client to show the Modal through the Discord API.
  *   interaction: Interaction // Interaction data.
  * });
  * @returns {Modal} Modal.
+ * @param modal
+ * @param options
  */
 
 async function showModal(modal, options) {
@@ -29,17 +29,11 @@ async function showModal(modal, options) {
 	let _modal = modal instanceof Modal ? modal : null;
 
 	function isJSONModal(modalToCheck) {
-		if (
-			!_modal &&
-      typeof modalToCheck === 'object' &&
-      modalToCheck.title &&
-      modalToCheck.custom_id &&
-      modalToCheck.components
-		) {
-			return true;
-		} else {
-			return false;
-		}
+		return !!(!_modal &&
+			typeof modalToCheck === 'object' &&
+			modalToCheck.title &&
+			modalToCheck.custom_id &&
+			modalToCheck.components);
 	}
 
 	if (!isJSONModal(modal) && !(modal instanceof Modal)) throw new Error('INVALID_MODAL');

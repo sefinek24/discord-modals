@@ -19,23 +19,23 @@ class ModalSubmitInteraction extends Interaction {
 		super(client, data);
 
 		/**
-     * The type of the Interaction.
-     * @type {String}
-     */
+		 * The type of the Interaction.
+		 * @type {String}
+		 */
 
 		this.type = InteractionTypes[data.type] ?? null;
 
 		/**
-     * The Custom Id of the Modal.
-     * @type {String}
-     */
+		 * The Custom Id of the Modal.
+		 * @type {String}
+		 */
 
 		this.customId = data.data.custom_id;
 
 		/**
-     * The Message of the Modal Submit Interaction.
-     * @type {Message}
-     */
+		 * The Message of the Modal Submit Interaction.
+		 * @type {Message}
+		 */
 
 		this.message = data.message
 			? this.channel?.messages._add(data.message) ?? data.message
@@ -50,16 +50,16 @@ class ModalSubmitInteraction extends Interaction {
 		}
 
 		/**
-     * The (Fields) Text Input Components of the Modal.
-     * @type {Array<ModalSubmitField>}
-     */
+		 * The (Fields) Text Input Components of the Modal.
+		 * @type {Array<ModalSubmitField>}
+		 */
 
 		this.fields =
-      modalFields.map((f) => new ModalSubmitField(f)) ??
-      data.data.components?.map((c) =>
-      	BaseMessageComponent.create(c, this.client),
-      ) ??
-      [];
+			modalFields.map((f) => new ModalSubmitField(f)) ??
+			data.data.components?.map((c) =>
+				BaseMessageComponent.create(c, this.client),
+			) ??
+			[];
 
 		const modalSelectMenus = [];
 		for (let i = 0; i < data.data.components.length; i++) {
@@ -70,29 +70,29 @@ class ModalSubmitInteraction extends Interaction {
 		}
 
 		/**
-     * The Select Menu Components of the Modal.
-     * @type {Array<ModalSubmitSelectMenu>}
-     */
+		 * The Select Menu Components of the Modal.
+		 * @type {Array<ModalSubmitSelectMenu>}
+		 */
 
 		this.selectMenus =
-      modalSelectMenus.map((s) => new ModalSubmitSelectMenu(s)) ??
-      data.data.components?.map((c) =>
-      	BaseMessageComponent.create(c, this.client),
-      ) ??
-      [];
+			modalSelectMenus.map((s) => new ModalSubmitSelectMenu(s)) ??
+			data.data.components?.map((c) =>
+				BaseMessageComponent.create(c, this.client),
+			) ??
+			[];
 
 		/**
-     * The Action Rows of the modal with the Text Input Components.
-     */
+		 * The Action Rows of the modal with the Text Input Components.
+		 */
 
 		this.components = data.data.components?.map(
 			(component) => new ModalActionRow(component),
 		);
 
 		/**
-     * An associated interaction webhook, can be used to further interact with this interaction
-     * @type {InteractionWebhook}
-     */
+		 * An associated interaction webhook, can be used to further interact with this interaction
+		 * @type {InteractionWebhook}
+		 */
 
 		this.webhook = new InteractionWebhook(
 			this.client,
@@ -102,10 +102,10 @@ class ModalSubmitInteraction extends Interaction {
 	}
 
 	/**
-   * Gets a Text Input Component value.
-   * @param {string} customId The Custom Id of a Text Input Component.
-   * @returns {string} The Value of a Text Input Component.
-   */
+	 * Gets a Text Input Component value.
+	 * @param {string} customId The Custom Id of a Text Input Component.
+	 * @returns {string} The Value of a Text Input Component.
+	 */
 
 	getTextInputValue(customId) {
 		const fieldFound = this.fields.find((f) => f.customId === customId);
@@ -114,10 +114,10 @@ class ModalSubmitInteraction extends Interaction {
 	}
 
 	/**
-   * Gets a Modal Submit Field.
-   * @param {string} customId The Custom Id of a Text Input Component.
-   * @returns {ModalSubmitField} Field of a Modal Submit Interaction.
-   */
+	 * Gets a Modal Submit Field.
+	 * @param {string} customId The Custom Id of a Text Input Component.
+	 * @returns {ModalSubmitField} Field of a Modal Submit Interaction.
+	 */
 
 	getField(customId) {
 		const fieldToGet = this.fields.find((f) => f.customId === customId);
@@ -126,10 +126,10 @@ class ModalSubmitInteraction extends Interaction {
 	}
 
 	/**
-   * Gets the values of a Select Menu Component.
-   * @param {string} customId The Custom Id of a Select Menu Component.
-   * @returns {Array<String>} The Values of a Select Menu Component.
-   */
+	 * Gets the values of a Select Menu Component.
+	 * @param {string} customId The Custom Id of a Select Menu Component.
+	 * @returns {Array<String>} The Values of a Select Menu Component.
+	 */
 
 	getSelectMenuValues(customId) {
 		const selectMenuFound = this.selectMenus.find(
@@ -140,10 +140,10 @@ class ModalSubmitInteraction extends Interaction {
 	}
 
 	/**
-   * Gets a Select Menu Component.
-   * @param {string} customId The Custom Id of a Select Menu Component.
-   * @returns {ModalSubmitSelectMenu} Select Menu Component of a Modal Submit Interaction.
-   */
+	 * Gets a Select Menu Component.
+	 * @param {string} customId The Custom Id of a Select Menu Component.
+	 * @returns {ModalSubmitSelectMenu} Select Menu Component of a Modal Submit Interaction.
+	 */
 
 	getSelectMenu(customId) {
 		const selectMenuToGet = this.selectMenus.find(

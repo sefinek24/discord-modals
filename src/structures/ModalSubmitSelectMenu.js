@@ -7,9 +7,9 @@
 class ModalSubmitSelectMenu {
 	constructor(data = {}) {
 		/**
-     * The type of the Select Menu Component.
-     * @type {String}
-     */
+		 * The type of the Select Menu Component.
+		 * @type {String}
+		 */
 
 		this.type = 'SELECT_MENU';
 
@@ -18,16 +18,16 @@ class ModalSubmitSelectMenu {
 
 	setup(data) {
 		/**
-     * The Custom Id of the Select Menu Component.
-     * @type {String}
-     */
+		 * The Custom Id of the Select Menu Component.
+		 * @type {String}
+		 */
 
 		this.customId = data.custom_id ?? null;
 
 		/**
-     * The Values of the Select Menu Component.
-     * @type {Array<String>}
-     */
+		 * The Values of the Select Menu Component.
+		 * @type {Array<String>}
+		 */
 
 		this.values = data.values ?? [];
 	}

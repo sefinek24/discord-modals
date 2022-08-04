@@ -30,10 +30,10 @@ async function showModal(modal, options) {
 	function isJSONModal(modalToCheck) {
 		if (
 			!_modal &&
-      typeof modalToCheck === 'object' &&
-      modalToCheck.title &&
-      modalToCheck.custom_id &&
-      modalToCheck.components
+			typeof modalToCheck === 'object' &&
+			modalToCheck.title &&
+			modalToCheck.custom_id &&
+			modalToCheck.components
 		) {
 			return true;
 		} else {

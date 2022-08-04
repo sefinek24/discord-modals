@@ -7,9 +7,9 @@
 class ModalSubmitField {
 	constructor(data = {}) {
 		/**
-     * The type of the Modal Submit Field.
-     * @type {String}
-     */
+		 * The type of the Modal Submit Field.
+		 * @type {String}
+		 */
 
 		this.type = 'TEXT_INPUT';
 
@@ -18,16 +18,16 @@ class ModalSubmitField {
 
 	setup(data) {
 		/**
-     * The Custom Id of the Modal Submit Field.
-     * @type {String}
-     */
+		 * The Custom Id of the Modal Submit Field.
+		 * @type {String}
+		 */
 
 		this.customId = data.custom_id ?? null;
 
 		/**
-     * The Value of the Modal Submit Field.
-     * @type {String}
-     */
+		 * The Value of the Modal Submit Field.
+		 * @type {String}
+		 */
 
 		switch (data.value.trim().length) {
 		case 0:
