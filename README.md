@@ -73,7 +73,7 @@ If you are ready, take this examples.
 const { Modal } = require('discord-modals'); // Modal class
 
 const modal = new Modal() // We create a Modal
-.setCustomId('modal-customid')
+.setCustomId('modal-customId')
 .setTitle('Modal')
 .addComponents();
 ```
@@ -85,7 +85,7 @@ const modal = new Modal() // We create a Modal
 const { Modal, TextInputComponent, SelectMenuComponent } = require('discord-modals'); // Import all
 
 const modal = new Modal() // We create a Modal
-.setCustomId('modal-customid')
+.setCustomId('modal-customId')
 .setTitle('Modal')
 .addComponents(
   new TextInputComponent() // We create a Text Input Component
@@ -123,7 +123,7 @@ const modal = new Modal() // We create a Modal
 const { Modal, TextInputComponent, SelectMenuComponent, showModal } = require('discord-modals'); // Import all
 
 const modal = new Modal() // We create a Modal
-.setCustomId('modal-customid')
+.setCustomId('modal-customId')
 .setTitle('Modal')
 .addComponents(
   new TextInputComponent() // We create a Text Input Component
@@ -176,7 +176,7 @@ client.on('interactionCreate', (interaction) => {
 
 ```js
 client.on('modalSubmit', async (modal) => {
-  if(modal.customId === 'modal-customid') {
+  if(modal.customId === 'modal-customId') {
     const nameResponse = modal.getTextInputValue('name');
     const themeResponse = modal.getSelectMenuValues('theme');
     modal.reply(`Thank you for answering the form! Powered by discord-modals.\nSo, you are **${nameResponse}** and you like the **${themeResponse}** theme. Awesome!`);

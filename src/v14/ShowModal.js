@@ -1,7 +1,6 @@
 'use strict';
 
-const { Routes } = require('discord-api-types/v9');
-const { Interaction } = require('discord.js');
+const { BaseInteraction, Routes } = require('discord.js');
 const Modal = require('../structures/Modal');
 const { Error } = require('../structures/errors');
 const { InteractionResponseTypes } = require('../util/Constants');
@@ -24,7 +23,7 @@ async function showModal(modal, options) {
 	if (!options.client) throw new Error('CLIENT_REQUIRED');
 	if (!options.interaction) throw new Error('INTERACTION_REQUIRED');
 	if (!options.client.rest) throw new Error('INVALID_CLIENT');
-	if (!(options.interaction instanceof Interaction)) throw new Error('INVALID_INTERACTION');
+	if (!(options.interaction instanceof BaseInteraction)) throw new Error('INVALID_INTERACTION');
 
 	let _modal = modal instanceof Modal ? modal : null;
 

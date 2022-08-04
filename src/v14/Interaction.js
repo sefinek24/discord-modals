@@ -1,6 +1,6 @@
 'use strict';
 
-const { InteractionType } = require('discord-api-types/v9');
+const { InteractionType } = require('discord.js');
 const { Base, PermissionsBitField } = require('discord.js');
 const SnowflakeUtil = require('../util/SnowflakeUtil');
 

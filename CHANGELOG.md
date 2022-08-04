@@ -73,7 +73,7 @@ Hello! This is the Change log section of Discord-Modals. Here you can see what t
 
 # v1.2.6
 
-- Add types of discord-api-types/v9 in the declaration file.
+- Add types of discord.js in the declaration file.
 - Add `.isRepliable()` and `.isFromMessage()` methods to `ModalSubmitInteraction` class.
 - Add discord-modals to yarn.
 - Update Readme and docs (yarn).

@@ -6,7 +6,7 @@ import {
   APIModalInteractionResponseCallbackData,
   APIModalSubmitInteraction,
   APIModalActionRowComponent,
-} from 'discord-api-types/v9';
+} from 'discord.js';
 import {
   Client,
   User,

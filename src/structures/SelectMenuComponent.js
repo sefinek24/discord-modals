@@ -2,7 +2,6 @@
 
 const BaseMessageComponent = require('./BaseMessageComponent');
 const ModalActionRow = require('./ModalActionRow');
-const { MessageComponentTypes } = require('../util/Constants');
 const Util = require('../util/Util');
 
 /**

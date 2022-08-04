@@ -1,6 +1,6 @@
 'use strict';
 
-const { Util } = require('discord.js');
+const { verifyString } = require('discord.js');
 const BaseMessageComponent = require('./BaseMessageComponent');
 const ModalActionRow = require('./ModalActionRow');
 const { RangeError } = require('./errors');
@@ -14,7 +14,7 @@ class Modal {
 	 * Represents a Modal Form to be shown in response to an Interaction.
 	 * @example
 	 * const modal = new Modal() // Modal constructor
-	 * .setCustomId('modal-customid')
+	 * .setCustomId('modal-customId')
 	 * .setTitle('Test of Discord-Modals!')
 	 * .addComponents(new TextInputComponent(), new MessageSelectMenu()); // Add a Text Input Component and a Select Menu.
 	 */
@@ -28,7 +28,7 @@ class Modal {
 		this.title = data.title ?? null;
 
 		/**
-		 * The Custom Id of the Modal.
+		 * The Custom ID of the Modal.
 		 * @type {String}
 		 */
 
@@ -65,13 +65,13 @@ class Modal {
 	}
 
 	/**
-	 * Sets the Custom Id of the Modal.
-	 * @param {String} customId The Custom Id of the modal.
+	 * Sets the Custom ID of the Modal.
+	 * @param {String} customId The Custom ID of the modal.
 	 * @returns {Modal} Modal.
 	 */
 
 	setCustomId(customId) {
-		this.customId = Util.verifyString(customId, RangeError, 'MODAL_CUSTOM_ID');
+		this.customId = verifyString(customId, RangeError, 'MODAL_CUSTOM_ID');
 		return this;
 	}
 
@@ -95,7 +95,7 @@ class Modal {
 	 */
 
 	setTitle(title) {
-		this.title = Util.verifyString(title, RangeError, 'MODAL_TITLE');
+		this.title = verifyString(title, RangeError, 'MODAL_TITLE');
 		return this;
 	}
 
