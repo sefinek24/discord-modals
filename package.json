@@ -28,13 +28,13 @@
   "author": "『𝑴𝒂𝒕𝒆𝒐ᵗᵉᵐ』#9999",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Mateo-tem/discord-modals/issues"
+    "url": "https://github.com/sefinek24/discord-modals/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Mateo-tem/discord-modals.git"
+    "url": "https://github.com/sefinek24/discord-modals.git"
   },
-  "homepage": "https://github.com/Mateo-tem/discord-modals#readme",
+  "homepage": "https://github.com/sefinek24/discord-modals#readme",
   "peerDependencies": {
     "discord.js": "*"
   }

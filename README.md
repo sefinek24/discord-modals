@@ -189,7 +189,7 @@ client.on('modalSubmit', async (modal) => {
 <img src="https://user-images.githubusercontent.com/79017590/172033349-816d4b8f-ab1b-4cb4-9d7a-f4919ba9aa70.gif" alt="Modal Test" width=700 />
 
 # 📚 Documentation
-- Check our documentation [here](https://github.com/Mateo-tem/discord-modals/blob/master/DOCS.md).
+- Check our documentation [here](https://github.com/sefinek24/discord-modals/blob/master/DOCS.md).
 
 # ❓ FAQ
 
@@ -219,6 +219,6 @@ If you give a response, you can't give a response again. So you need to remove `
 - 『𝑴𝒂𝒕𝒆𝒐ᵗᵉᵐ』#9999
 
 # ⛔ Issues/Bugs?
-> **Please report it on our GitHub Repository [here](https://github.com/Mateo-tem/discord-modals/issues) to fix it inmmediately or join to the support server.**
+> **Please report it on our GitHub Repository [here](https://github.com/sefinek24/discord-modals/issues) to fix it inmmediately or join to the support server.**
 
 > **Credits:** This package is based on discord.js, code base was extracted for this.

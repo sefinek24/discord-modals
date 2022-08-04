@@ -715,7 +715,7 @@ Discord-Modals integrates some errors to avoid issues and respect the structures
 
 # 🔨 Do you want to contribute to Discord-Modals?
 
-- Check our [GitHub Repository](https://github.com/Mateo-tem/discord-modals) and Report Issues or make a Pull Request to contribute to this awesome project. We are waiting for you!
+- Check our [GitHub Repository](https://github.com/sefinek24/discord-modals) and Report Issues or make a Pull Request to contribute to this awesome project. We are waiting for you!
 
 ---
 
