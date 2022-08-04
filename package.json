@@ -1,5 +1,5 @@
 {
-  "name": "discord-modals",
+  "name": "@sefinek/discord-modals",
   "version": "1.3.8",
   "description": "Discord-Modals is a package that allows your discord.js v13 and v14 bot to create, and interact with Modals, a new Discord feature.",
   "main": "index.js",
@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sefinek24/discord-modals.git"
+    "url": "git+https://github.com/sefinek24/discord-modals.git"
   },
   "homepage": "https://github.com/sefinek24/discord-modals#readme",
   "peerDependencies": {
